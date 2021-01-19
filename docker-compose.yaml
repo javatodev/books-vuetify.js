@@ -30,7 +30,6 @@ services:
       - books-mysql-net
     image: books-api
     container_name: books-api
-    #command: bash -c "while true; do echo $DATABASE_URL; echo quit | telnet postgres 5432; sleep 10; done"
     #command: bash -c "while true; do echo quit | telnet mysql 3306; sleep 10; done"
 
   books-frontend:
@@ -54,13 +53,10 @@ services:
     tty: true
     image: books-frontend
     container_name: books-frontend
-    #command: bash -c "while true; do echo $DATABASE_URL; echo quit | telnet postgres 5432; sleep 10; done"
+    #command: bash -c "while true; do curl http://books-api:808/api/library/author; sleep 10; done"
 
 volumes:
    mysql:
-#  postgres:
-#  frontend:
-#  node_modules:
 
 networks:
   books-mysql-net:
