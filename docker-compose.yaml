@@ -23,7 +23,7 @@ services:
     environment:
       TZ: Europe/UTC
     ports:
-      - 8080
+      - 8091:8080
     depends_on:
       - mysql
     networks:

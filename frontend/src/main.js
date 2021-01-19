@@ -11,7 +11,7 @@ Vue.config.productionTip = false
 //axios
 Vue.use(VueAxios, axios)
 
-axios.defaults.baseURL = "http://books-api:8080/api/library"
+axios.defaults.baseURL = "http://localhost:8091/api/library"
 
 new Vue({
   router,
